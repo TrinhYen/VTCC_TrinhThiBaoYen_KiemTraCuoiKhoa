@@ -14,12 +14,12 @@
         </classes>
     </test>
 
-<!--    <test name="Exam Parallel Edge" >-->
-<!--        <parameter name="browserName" value="edge"/>-->
-<!--        <classes>-->
-<!--            <class name="com.yenttb.Exam.testcases.AddNewProductTest">-->
-<!--            </class>-->
-<!--        </classes>-->
-<!--    </test>-->
+    <test name="Exam Parallel Edge" >
+        <parameter name="browserName" value="edge"/>
+        <classes>-->
+            <class name="com.yenttb.Exam.testcases.AddNewProductTest">
+            </class>
+        </classes>
+    </test> 
 
 </suite>
