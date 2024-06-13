@@ -22,21 +22,21 @@ public class ProductListPage extends CommonPage{
         WebUI.waitForJQueryLoad();
         WebUI.sleep(2);
         Assert.assertEquals(WebUI.getElementText(itemFirstProductOnTheTable), name, "The Product value not match.");
+        WebUI.setText(inputSearch, name);
+        WebUI.pressENTER();
+        WebUI.waitForPageLoaded();
+        WebUI.waitForJQueryLoad();
+        WebUI.sleep(2);
+        Assert.assertTrue(WebUI.isDisplayed(itemFirstProductOnTheTable), "Nothing found");
+        Assert.assertEquals(WebUI.getElementText(itemFirstProductOnTheTable), name, "The Product value match.");
+        WebUI.clickElement(closeSuccessMessageButton);
+        WebUI.clickElement(itemFirstProductDetail);
         return this;
     }
 
     public ProductListPage searchProductName(String productName) {
         WebUI.waitForPageLoaded();
         WebUI.sleep(5);
-        WebUI.setText(inputSearch, productName);
-        WebUI.pressENTER();
-        WebUI.waitForPageLoaded();
-        WebUI.waitForJQueryLoad();
-        WebUI.sleep(2);
-        Assert.assertTrue(WebUI.isDisplayed(itemFirstProductOnTheTable), "Nothing found");
-        Assert.assertEquals(WebUI.getElementText(itemFirstProductOnTheTable), productName, "The Product value match.");
-        WebUI.clickElement(closeSuccessMessageButton);
-        WebUI.clickElement(itemFirstProductDetail);
         return this;
     }
 }
