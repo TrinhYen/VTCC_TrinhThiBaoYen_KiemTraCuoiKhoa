@@ -8,9 +8,6 @@ import org.testng.annotations.Test;
 
 public class AddSearchProduct extends BaseTest {
 
-    //private LoginPage loginPage;
-    //private ProductListPage productPage;
-//    private ProductDetailPage productDetailPage;
     private String PRODUCT_NAME = "yenttb";
     private LoginPage loginPage = new LoginPage();
     ProductListPage productPage = new ProductListPage();
